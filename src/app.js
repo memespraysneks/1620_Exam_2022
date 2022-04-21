@@ -52,3 +52,12 @@ const contactsList = [
 ]
 
 // Your code goes here
+contactArea = document.getElementById("display_all_contacts")
+function loadContacts(contactList){
+  for (let contact in contactList){
+    currentContact = contactList[contact]
+
+  }
+}
+
+loadContacts(contactsList)
