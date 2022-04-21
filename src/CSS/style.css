@@ -23,10 +23,14 @@ img {
 }
 
 /* styles */
+body {
+  height: 100vh;
+}
+
 .container {
   display: flex;
-
-
+  height: 100vh;
+  flex-wrap: wrap;
   font-family: 'Inter', sans-serif;
   background-color: var(--white);
 }
@@ -66,7 +70,7 @@ header a:hover {
 }
 
 main {
-
+  display: flex;
 }
 
 #individual_contact {
