@@ -64,7 +64,7 @@ function loadContacts(contactList){
 function showContact(evt){
   index = parseInt(evt.target.className)
   contact = contactsList[index]
-  singleContactArea.innerHTML = `<div id="individual_contact"><img src="img/${contact.image}"><h1>${contact.name}</h1><p>email: ${contact.email}</p><p>phone: ${contact.phone}</p></div>`
+  singleContactArea.innerHTML = `<div id="individual_contact"><button><span aria-hidden="true">Click to close</span></button><img src="img/${contact.image}"><h1>${contact.name}</h1><p>email: ${contact.email}</p><p>phone: ${contact.phone}</p></div>`
   contactArea.innerHTML = ''
 }
 
