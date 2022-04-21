@@ -56,7 +56,7 @@ contactArea = document.getElementById("display_all_contacts")
 function loadContacts(contactList){
   for (let contact in contactList){
     currentContact = contactList[contact]
-
+    contactArea.innerHTML += `<div id=${currentContact.ID}><img src="img/${currentContact.image}"> <h1>${currentContact.name}</h1></div>`
   }
 }
 
