@@ -53,6 +53,7 @@ const contactsList = [
 
 // Your code goes here
 contactArea = document.getElementById("display_all_contacts")
+singleContactArea = document.getElementById("display_single_contact")
 function loadContacts(contactList){
   for (let contact in contactList){
     currentContact = contactList[contact]
@@ -60,4 +61,12 @@ function loadContacts(contactList){
   }
 }
 
+function showContact(evt){
+  index = parseInt(evt.target.id)
+  console.log(index)
+  contact = contactsList[index]
+  singleContactArea.innHTML = `<div id=${contact.ID}><img src="img/${contact.image}"><h1>${contact.name}</h1></div>`
+}
+
 loadContacts(contactsList)
+contactArea.addEventListener("click", showContact)

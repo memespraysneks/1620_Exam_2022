@@ -106,7 +106,8 @@ main {
 #display_all_contacts {
   display: flex;
   flex-grow: 0;
-  flex-wrap: wrap;
+  flex-basis: auto;
+  flex-flow:row wrap;
   gap: 20px;
   padding: 20px;
 }
@@ -135,6 +136,7 @@ main {
 footer {
   height: 5rem;
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 
