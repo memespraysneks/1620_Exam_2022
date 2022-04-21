@@ -57,15 +57,14 @@ singleContactArea = document.getElementById("display_single_contact")
 function loadContacts(contactList){
   for (let contact in contactList){
     currentContact = contactList[contact]
-    contactArea.innerHTML += `<div id=${currentContact.ID}><img src="img/${currentContact.image}"> <p>${currentContact.name}</p></div>`
+    contactArea.innerHTML += `<div class=${currentContact.ID}><img class=${currentContact.ID} src="img/${currentContact.image}"> <p class = ${currentContact.ID}>${currentContact.name}</p></div>`
   }
 }
 
 function showContact(evt){
-  index = parseInt(evt.target.id)
-  console.log(index)
+  index = parseInt(evt.target.className)
   contact = contactsList[index]
-  singleContactArea.innHTML = `<div id=${contact.ID}><img src="img/${contact.image}"><h1>${contact.name}</h1></div>`
+  singleContactArea.innerHTML = `<img src="img/${contact.image}"><h1>${contact.name}</h1><p>${contact.email}</p><p>${contact.phone}</p>`
 }
 
 loadContacts(contactsList)
